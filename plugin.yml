@@ -1,6 +1,7 @@
-name: TemplatePlugin
+name: zTranslator
 author: Maxlego08
-main: fr.maxlego08.template.Template
-version: 0.0.5.0
+website: https://groupez.dev
+main: fr.maxlego08.ztranslator.TranslatorPlugin
+version: 1.0.0.0
 api-version: 1.13
 commands:
