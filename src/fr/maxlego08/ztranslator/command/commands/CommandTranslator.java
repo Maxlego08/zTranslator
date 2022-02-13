@@ -1,11 +1,8 @@
 package fr.maxlego08.ztranslator.command.commands;
 
-import org.bukkit.Material;
-import org.bukkit.inventory.ItemStack;
-
 import fr.maxlego08.ztranslator.TranslatorPlugin;
-import fr.maxlego08.ztranslator.api.Translator;
 import fr.maxlego08.ztranslator.command.VCommand;
+import fr.maxlego08.ztranslator.zcore.enums.Message;
 import fr.maxlego08.ztranslator.zcore.enums.Permission;
 import fr.maxlego08.ztranslator.zcore.utils.commands.CommandType;
 
@@ -17,17 +14,14 @@ public class CommandTranslator extends VCommand {
 		this.addSubCommand(new CommandTranslatorReload(plugin));
 	}
 
-	@SuppressWarnings("deprecation")
 	@Override
 	protected CommandType perform(TranslatorPlugin plugin) {
 
-		
-		ItemStack itemStack = new ItemStack(Material.STONE, 1, (byte)5);		
-		Translator translator = plugin.getManager();
-		
-		String value = translator.translate(itemStack);		
-		this.sender.sendMessage("§7Traduction§8: §f" + value);
-		
+		this.subVCommands.forEach(e -> {
+			message(this.sender, Message.COMMAND_SYNTAXE_HELP, "%syntax%", e.getSyntax(), "%description%",
+					e.getDescription());
+		});
+
 		return CommandType.SUCCESS;
 	}
 
