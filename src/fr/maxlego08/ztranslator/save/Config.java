@@ -7,7 +7,7 @@ public class Config implements Saveable {
 
 	public static String defaultTranslation = "fr_FR";
 	
-	public static boolean enableDebug = true;
+	public static boolean enableDebug = false;
 	public static boolean enableDebugTime = false;
 	
 	/**

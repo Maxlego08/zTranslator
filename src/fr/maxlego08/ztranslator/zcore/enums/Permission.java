@@ -1,6 +1,7 @@
 package fr.maxlego08.ztranslator.zcore.enums;
 
 public enum Permission {
+	ZTRANSLATOR_USE, ZTRANSLATOR_RELOAD
 
 	;
 

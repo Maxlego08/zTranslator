@@ -3445,7 +3445,8 @@
     {
       "item": {
         "id": 130,
-        "material": "END_CHEST"
+        "material": "END_CHEST",
+        "oldmaterial": "ENDER_CHEST"
       },
       "lang": "block.minecraft.ender_chest",
       "name": "ender_chest"

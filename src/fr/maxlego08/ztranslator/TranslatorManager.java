@@ -5,9 +5,10 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.lang.reflect.Type;
 import java.net.URI;
+import java.nio.file.FileSystem;
+import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -17,6 +18,8 @@ import java.util.Optional;
 import java.util.stream.Stream;
 
 import org.bukkit.Material;
+import org.bukkit.OfflinePlayer;
+import org.bukkit.inventory.ItemStack;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -96,7 +99,11 @@ public class TranslatorManager extends ZUtils implements Translator {
 		this.langNames.clear();
 		try {
 			URI uri = this.plugin.getClassL().getResource("langs").toURI();
-			Stream<Path> walk = Files.walk(Paths.get(uri), 1);
+			final Map<String, String> env = new HashMap<>();
+			final String[] array = uri.toString().split("!");
+			final FileSystem fs = FileSystems.newFileSystem(URI.create(array[0]), env);
+			final Path path1 = fs.getPath(array[1]);
+			Stream<Path> walk = Files.walk(path1, 1);
 			for (Iterator<Path> it = walk.iterator(); it.hasNext();) {
 				Path path = it.next();
 				String name = path.getFileName().toString();
@@ -108,6 +115,7 @@ public class TranslatorManager extends ZUtils implements Translator {
 				}
 			}
 			walk.close();
+			fs.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -125,22 +133,42 @@ public class TranslatorManager extends ZUtils implements Translator {
 
 	@Override
 	public String translate(String lang, Material material) {
-		Optional<Translation> optional = this.getTranslation(lang);
-		if (optional.isPresent()) {
-			Translation translation = optional.get();
-			Optional<String> optionalKey = this.getKey(material);
-			if (optionalKey.isPresent()) {
-				String key = optionalKey.get();
-				Optional<String> optionalTranslate = translation.get(key);
-				return optionalTranslate.isPresent() ? optionalTranslate.get() : material.name();
-			}
-		}
-		return material.name();
+		return this.translate(lang, new ItemStack(material));
 	}
 
 	@Override
 	public Optional<String> getKey(Material material) {
-		return items.stream().filter(e -> e.isKeyOf(material)).map(e -> e.getLang()).findFirst();
+		return this.getKey(new ItemStack(material));
+	}
+
+	@Override
+	public String translate(ItemStack itemStack) {
+		return this.translate(Config.defaultTranslation, itemStack);
+	}
+
+	@Override
+	public String translate(String lang, ItemStack itemStack) {
+		Optional<Translation> optional = this.getTranslation(lang);
+		if (optional.isPresent()) {
+			Translation translation = optional.get();
+			Optional<String> optionalKey = this.getKey(itemStack);
+			if (optionalKey.isPresent()) {
+				String key = optionalKey.get();
+				Optional<String> optionalTranslate = translation.get(key);
+				return optionalTranslate.isPresent() ? optionalTranslate.get() : this.name(itemStack);
+			}
+		}
+		return this.name(itemStack);
+	}
+
+	@Override
+	public Optional<String> getKey(ItemStack itemStack) {
+		return items.stream().filter(e -> e.isKeyOf(itemStack)).map(e -> e.getLang()).findFirst();
+	}
+
+	@Override
+	public String translate(OfflinePlayer player, ItemStack itemStack) {
+		return this.translate(itemStack);
 	}
 
 }

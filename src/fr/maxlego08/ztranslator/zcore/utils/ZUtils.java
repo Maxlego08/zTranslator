@@ -578,8 +578,9 @@ public abstract class ZUtils extends MessageUtils {
 	 * @return
 	 */
 	protected String getItemName(ItemStack item) {
-		if (item.hasItemMeta() && item.getItemMeta().hasDisplayName())
+		if (item.hasItemMeta() && item.getItemMeta().hasDisplayName()) {
 			return item.getItemMeta().getDisplayName();
+		}
 		String name = item.serialize().get("type").toString().replace("_", " ").toLowerCase();
 		return name.substring(0, 1).toUpperCase() + name.substring(1);
 	}

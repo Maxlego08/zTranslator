@@ -1,6 +1,6 @@
 package fr.maxlego08.ztranslator.loader;
 
-import org.bukkit.Material;
+import org.bukkit.inventory.ItemStack;
 
 public class ItemBind {
 
@@ -41,7 +41,9 @@ public class ItemBind {
 		return name;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
@@ -49,10 +51,11 @@ public class ItemBind {
 		return "ItemBind [item=" + item + ", lang=" + lang + ", name=" + name + "]";
 	}
 
-	public boolean isKeyOf(Material material) {
-		return this.item != null && this.item.isKeyOf(material);
+	public boolean isKeyOf(ItemStack itemStack) {
+		if (this.item == null) {
+			System.out.println("NULLED " + this.name + " - " + this.lang);
+		}
+		return this.item.isKeyOf(itemStack);
 	}
-	
-	
 
 }

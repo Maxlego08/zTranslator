@@ -11,7 +11,7 @@ import fr.maxlego08.ztranslator.zcore.utils.nms.NMSUtils;
 
 public enum Message {
 
-	PREFIX("§8(§6Template§8) "),
+	PREFIX("§8(§6Translator§8) "),
 	
 	TELEPORT_MOVE("§cYou must not move!"),
 	TELEPORT_MESSAGE("§7Teleportation in §3%second% §7seconds!"),
@@ -34,7 +34,10 @@ public enum Message {
 	COMMAND_NO_PERMISSION("§cYou do not have permission to run this command."),
 	COMMAND_NO_CONSOLE("§cOnly one player can execute this command."),
 	COMMAND_NO_ARG("§cImpossible to find the command with its arguments."),
-	COMMAND_SYNTAXE_HELP("§f%syntax% §7» §7%description%"),
+	COMMAND_SYNTAXE_HELP("§f%syntax% §7» §7%description%"), 
+	
+	RELOAD("§aYou have just reloaded the configuration files."), 
+	DESCRIPTION_RELOAD("Reload config files"),
 	
 	
 	;

@@ -1,6 +1,8 @@
 package fr.maxlego08.ztranslator.loader;
 
-import org.bukkit.Material;
+import org.bukkit.inventory.ItemStack;
+
+import fr.maxlego08.ztranslator.zcore.utils.nms.NMSUtils;
 
 public class Item {
 
@@ -82,9 +84,24 @@ public class Item {
 				+ ", version=" + version + ", max=" + max + "]";
 	}
 
-	public boolean isKeyOf(Material material) {
-		return material.name().equals(this.material)
-				|| (this.oldMaterial != null && material.name().equals(this.oldMaterial)) && this.data == 0;
+	@SuppressWarnings("deprecation")
+	public boolean isKeyOf(ItemStack itemStack) {
+		String currentMaterial = itemStack.getType().name();
+
+		if (NMSUtils.isNewVersion()) {
+			return this.material.equals(currentMaterial);
+		}
+
+		if (currentMaterial.equals(this.material) && (byte) this.data == itemStack.getData().getData()) {
+			return true;
+		}
+
+		if (this.oldMaterial != null && currentMaterial.equals(this.oldMaterial)
+				&& (byte) this.data == itemStack.getData().getData()) {
+			return true;
+		}
+
+		return false;
 	}
 
 }

@@ -7,6 +7,7 @@ import org.bukkit.plugin.ServicePriority;
 
 import fr.maxlego08.ztranslator.api.Translator;
 import fr.maxlego08.ztranslator.command.CommandManager;
+import fr.maxlego08.ztranslator.command.commands.CommandTranslator;
 import fr.maxlego08.ztranslator.inventory.InventoryManager;
 import fr.maxlego08.ztranslator.listener.AdapterListener;
 import fr.maxlego08.ztranslator.save.Config;
@@ -36,10 +37,12 @@ public class TranslatorPlugin extends ZPlugin {
 		this.commandManager = new CommandManager(this);
 		this.inventoryManager = new InventoryManager(this);
 
+		this.registerCommand("ztranslator", new CommandTranslator(this));
+		
 		/* Add Listener */
 
 		this.addListener(new AdapterListener(this));
-		this.addListener(inventoryManager);
+		this.addListener(this.inventoryManager);
 
 		Bukkit.getServicesManager().register(Translator.class, this.manager, this, ServicePriority.Highest);
 
@@ -49,7 +52,7 @@ public class TranslatorPlugin extends ZPlugin {
 		this.addSave(this.manager);
 
 		this.getSavers().forEach(saver -> saver.load(this.getPersist()));
-F						
+						
 		this.postEnable();
 	}
 
