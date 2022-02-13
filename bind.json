@@ -548,7 +548,7 @@
         "id": 383,
         "data": 65,
         "material": "BAT_EGG",
-        "oldMaterial": "EGG"
+        "oldMaterial": "MONSTER_EGG"
       },
       "lang": "item.minecraft.bat_spawn_egg",
       "name": "bat_spawn_egg"
@@ -919,7 +919,7 @@
         "id": 383,
         "data": 61,
         "material": "BLAZE_EGG",
-        "oldMaterial": "EGG"
+        "oldMaterial": "MONSTER_EGG"
       },
       "lang": "item.minecraft.blaze_spawn_egg",
       "name": "blaze_spawn_egg"
@@ -1774,7 +1774,7 @@
         "id": 383,
         "data": 59,
         "material": "CAVE_SPIDER_EGG",
-        "oldMaterial": "EGG"
+        "oldMaterial": "MONSTER_EGG"
       },
       "lang": "item.minecraft.cave_spider_spawn_egg",
       "name": "cave_spider_spawn_egg"
@@ -1855,7 +1855,7 @@
         "id": 383,
         "data": 93,
         "material": "CHICKEN_EGG",
-        "oldMaterial": "EGG"
+        "oldMaterial": "MONSTER_EGG"
       },
       "lang": "item.minecraft.chicken_spawn_egg",
       "name": "chicken_spawn_egg"
@@ -2225,7 +2225,7 @@
         "id": 383,
         "data": 92,
         "material": "COW_EGG",
-        "oldMaterial": "EGG"
+        "oldMaterial": "MONSTER_EGG"
       },
       "lang": "item.minecraft.cow_spawn_egg",
       "name": "cow_spawn_egg"
@@ -2296,7 +2296,7 @@
         "id": 383,
         "data": 50,
         "material": "CREEPER_EGG",
-        "oldMaterial": "EGG"
+        "oldMaterial": "MONSTER_EGG"
       },
       "lang": "item.minecraft.creeper_spawn_egg",
       "name": "creeper_spawn_egg"
@@ -3220,7 +3220,7 @@
         "id": 383,
         "data": 31,
         "material": "DONKEY_EGG",
-        "oldMaterial": "EGG",
+        "oldMaterial": "MONSTER_EGG",
         "version": 1.11
       },
       "lang": "item.minecraft.donkey_spawn_egg",
@@ -3308,7 +3308,7 @@
         "id": 383,
         "data": 4,
         "material": "ELDER_GUARDIAN_EGG",
-        "oldMaterial": "EGG",
+        "oldMaterial": "MONSTER_EGG",
         "version": 1.08
       },
       "lang": "item.minecraft.elder_guardian_spawn_egg",
@@ -3465,7 +3465,7 @@
         "id": 383,
         "data": 58,
         "material": "ENDERMAN_EGG",
-        "oldMaterial": "EGG"
+        "oldMaterial": "MONSTER_EGG"
       },
       "lang": "item.minecraft.enderman_spawn_egg",
       "name": "enderman_spawn_egg"
@@ -3475,7 +3475,7 @@
         "id": 383,
         "data": 67,
         "material": "ENDERMITE_EGG",
-        "oldMaterial": "EGG",
+        "oldMaterial": "MONSTER_EGG",
         "version": 1.08
       },
       "lang": "item.minecraft.endermite_spawn_egg",
@@ -3486,7 +3486,7 @@
         "id": 383,
         "data": 34,
         "material": "EVOKER_EGG",
-        "oldMaterial": "EGG",
+        "oldMaterial": "MONSTER_EGG",
         "version": 1.11
       },
       "lang": "item.minecraft.evoker_spawn_egg",
@@ -3711,7 +3711,7 @@
         "id": 383,
         "data": 56,
         "material": "GHAST_EGG",
-        "oldMaterial": "EGG"
+        "oldMaterial": "MONSTER_EGG"
       },
       "lang": "item.minecraft.ghast_spawn_egg",
       "name": "ghast_spawn_egg"
@@ -4257,7 +4257,7 @@
         "id": 383,
         "data": 68,
         "material": "GUARDIAN_EGG",
-        "oldMaterial": "EGG",
+        "oldMaterial": "MONSTER_EGG",
         "version": 1.08
       },
       "lang": "item.minecraft.guardian_spawn_egg",
@@ -4373,7 +4373,7 @@
         "id": 383,
         "data": 100,
         "material": "HORSE_EGG",
-        "oldMaterial": "EGG"
+        "oldMaterial": "MONSTER_EGG"
       },
       "lang": "item.minecraft.horse_spawn_egg",
       "name": "horse_spawn_egg"
@@ -4383,7 +4383,7 @@
         "id": 383,
         "data": 23,
         "material": "HUSK_EGG",
-        "oldMaterial": "EGG",
+        "oldMaterial": "MONSTER_EGG",
         "version": 1.11
       },
       "lang": "item.minecraft.husk_spawn_egg",
@@ -5309,7 +5309,7 @@
         "id": 383,
         "data": 103,
         "material": "LLAMA_EGG",
-        "oldMaterial": "EGG",
+        "oldMaterial": "MONSTER_EGG",
         "version": 1.11
       },
       "lang": "item.minecraft.llama_spawn_egg",
@@ -5465,7 +5465,7 @@
         "id": 383,
         "data": 62,
         "material": "MAGMA_CUME_EGG",
-        "oldMaterial": "EGG"
+        "oldMaterial": "MONSTER_EGG"
       },
       "lang": "item.minecraft.magma_cube_spawn_egg",
       "name": "magma_cube_spawn_egg"
@@ -5579,7 +5579,7 @@
         "id": 383,
         "data": 96,
         "material": "MOOSHROOM_EGG",
-        "oldMaterial": "EGG"
+        "oldMaterial": "MONSTER_EGG"
       },
       "lang": "item.minecraft.mooshroom_spawn_egg",
       "name": "mooshroom_spawn_egg"
@@ -5673,7 +5673,7 @@
         "id": 383,
         "data": 32,
         "material": "MULE_EGG",
-        "oldMaterial": "EGG",
+        "oldMaterial": "MONSTER_EGG",
         "version": 1.11
       },
       "lang": "item.minecraft.mule_spawn_egg",
@@ -6210,7 +6210,7 @@
         "id": 383,
         "data": 98,
         "material": "OCELOT_EGG",
-        "oldMaterial": "EGG"
+        "oldMaterial": "MONSTER_EGG"
       },
       "lang": "item.minecraft.ocelot_spawn_egg",
       "name": "ocelot_spawn_egg"
@@ -6419,7 +6419,7 @@
         "id": 383,
         "data": 105,
         "material": "PARROT_EGG",
-        "oldMaterial": "EGG",
+        "oldMaterial": "MONSTER_EGG",
         "version": 1.12
       },
       "lang": "item.minecraft.parrot_spawn_egg",
@@ -6457,7 +6457,7 @@
         "id": 383,
         "data": 90,
         "material": "PIG_EGG",
-        "oldMaterial": "EGG"
+        "oldMaterial": "MONSTER_EGG"
       },
       "lang": "item.minecraft.pig_spawn_egg",
       "name": "pig_spawn_egg"
@@ -6660,7 +6660,7 @@
         "id": 383,
         "data": 102,
         "material": "POLAR_BEAR_EGG",
-        "oldMaterial": "EGG",
+        "oldMaterial": "MONSTER_EGG",
         "version": 1.1
       },
       "lang": "item.minecraft.polar_bear_spawn_egg",
@@ -7261,7 +7261,7 @@
         "id": 383,
         "data": 101,
         "material": "RABBIT_EGG",
-        "oldMaterial": "EGG",
+        "oldMaterial": "MONSTER_EGG",
         "version": 1.08
       },
       "lang": "item.minecraft.rabbit_spawn_egg",
@@ -7829,7 +7829,7 @@
         "id": 383,
         "data": 91,
         "material": "SHEEP_EGG",
-        "oldMaterial": "EGG"
+        "oldMaterial": "MONSTER_EGG"
       },
       "lang": "item.minecraft.sheep_spawn_egg",
       "name": "sheep_spawn_egg"
@@ -7875,7 +7875,7 @@
         "id": 383,
         "data": 69,
         "material": "SHULKER_EGG",
-        "oldMaterial": "EGG",
+        "oldMaterial": "MONSTER_EGG",
         "version": 1.09
       },
       "lang": "item.minecraft.shulker_spawn_egg",
@@ -7886,7 +7886,7 @@
         "id": 383,
         "data": 60,
         "material": "SILVERFISH_EGG",
-        "oldMaterial": "EGG"
+        "oldMaterial": "MONSTER_EGG"
       },
       "lang": "item.minecraft.silverfish_spawn_egg",
       "name": "silverfish_spawn_egg"
@@ -7896,7 +7896,7 @@
         "id": 383,
         "data": 28,
         "material": "SKELETON_HORSE_EGG",
-        "oldMaterial": "EGG",
+        "oldMaterial": "MONSTER_EGG",
         "version": 1.11
       },
       "lang": "item.minecraft.skeleton_horse_spawn_egg",
@@ -7917,7 +7917,7 @@
         "id": 383,
         "data": 51,
         "material": "SKELETON_EGG",
-        "oldMaterial": "EGG"
+        "oldMaterial": "MONSTER_EGG"
       },
       "lang": "item.minecraft.skeleton_spawn_egg",
       "name": "skeleton_spawn_egg"
@@ -7936,7 +7936,7 @@
         "id": 383,
         "data": 55,
         "material": "SLIME_EGG",
-        "oldMaterial": "EGG"
+        "oldMaterial": "MONSTER_EGG"
       },
       "lang": "item.minecraft.slime_spawn_egg",
       "name": "slime_spawn_egg"
@@ -8168,7 +8168,7 @@
         "id": 383,
         "data": 52,
         "material": "SPIDER_EGG",
-        "oldMaterial": "EGG"
+        "oldMaterial": "MONSTER_EGG"
       },
       "lang": "item.minecraft.spider_spawn_egg",
       "name": "spider_spawn_egg"
@@ -8332,7 +8332,7 @@
         "id": 383,
         "data": 94,
         "material": "SQUID_EGG",
-        "oldMaterial": "EGG"
+        "oldMaterial": "MONSTER_EGG"
       },
       "lang": "item.minecraft.squid_spawn_egg",
       "name": "squid_spawn_egg"
@@ -8494,7 +8494,7 @@
         "id": 383,
         "data": 6,
         "material": "STRAY_EGG",
-        "oldMaterial": "EGG",
+        "oldMaterial": "MONSTER_EGG",
         "version": 1.11
       },
       "lang": "item.minecraft.stray_spawn_egg",
@@ -8898,7 +8898,7 @@
         "id": 383,
         "data": 35,
         "material": "VEX_EGG",
-        "oldMaterial": "EGG",
+        "oldMaterial": "MONSTER_EGG",
         "version": 1.11
       },
       "lang": "item.minecraft.vex_spawn_egg",
@@ -8909,7 +8909,7 @@
         "id": 383,
         "data": 120,
         "material": "VILLAGER_EGG",
-        "oldMaterial": "EGG"
+        "oldMaterial": "MONSTER_EGG"
       },
       "lang": "item.minecraft.villager_spawn_egg",
       "name": "villager_spawn_egg"
@@ -8919,7 +8919,7 @@
         "id": 383,
         "data": 36,
         "material": "VINDICATOR_EGG",
-        "oldMaterial": "EGG",
+        "oldMaterial": "MONSTER_EGG",
         "version": 1.11
       },
       "lang": "item.minecraft.vindicator_spawn_egg",
@@ -9401,7 +9401,7 @@
         "id": 383,
         "data": 66,
         "material": "WITCH_EGG",
-        "oldMaterial": "EGG"
+        "oldMaterial": "MONSTER_EGG"
       },
       "lang": "item.minecraft.witch_spawn_egg",
       "name": "witch_spawn_egg"
@@ -9430,7 +9430,7 @@
         "id": 383,
         "data": 5,
         "material": "WITHER_SKELETON_EGG",
-        "oldMaterial": "EGG",
+        "oldMaterial": "MONSTER_EGG",
         "version": 1.11
       },
       "lang": "item.minecraft.wither_skeleton_spawn_egg",
@@ -9441,7 +9441,7 @@
         "id": 383,
         "data": 95,
         "material": "WOLF_EGG",
-        "oldMaterial": "EGG"
+        "oldMaterial": "MONSTER_EGG"
       },
       "lang": "item.minecraft.wolf_spawn_egg",
       "name": "wolf_spawn_egg"
@@ -9635,7 +9635,7 @@
         "id": 383,
         "data": 29,
         "material": "ZOMBIE_HORSE_EGG",
-        "oldMaterial": "EGG",
+        "oldMaterial": "MONSTER_EGG",
         "version": 1.11
       },
       "lang": "item.minecraft.zombie_horse_spawn_egg",
@@ -9646,7 +9646,7 @@
         "id": 383,
         "data": 54,
         "material": "ZOMBIE_EGG",
-        "oldMaterial": "EGG"
+        "oldMaterial": "MONSTER_EGG"
       },
       "lang": "item.minecraft.zombie_spawn_egg",
       "name": "zombie_spawn_egg"
@@ -9656,7 +9656,7 @@
         "id": 383,
         "data": 27,
         "material": "ZOMBIE_VILLAGER_EGG",
-        "oldMaterial": "EGG",
+        "oldMaterial": "MONSTER_EGG",
         "version": 1.11
       },
       "lang": "item.minecraft.zombie_villager_spawn_egg",
@@ -9667,7 +9667,7 @@
         "id": 383,
         "data": 57,
         "material": "ZOMBIE_PIGMAN_EGG",
-        "oldMaterial": "EGG"
+        "oldMaterial": "MONSTER_EGG"
       },
       "lang": "item.minecraft.zombified_piglin_spawn_egg",
       "name": "zombified_piglin_spawn_egg"
