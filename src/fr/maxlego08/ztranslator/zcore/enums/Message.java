@@ -38,6 +38,7 @@ public enum Message {
 	
 	RELOAD("§aYou have just reloaded the configuration files."), 
 	DESCRIPTION_RELOAD("Reload config files"),
+	DESCRIPTION_VERSION("Show plugin version"),
 	
 	
 	;
