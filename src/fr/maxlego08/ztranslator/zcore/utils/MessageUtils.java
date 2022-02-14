@@ -9,7 +9,6 @@ import org.bukkit.entity.Player;
 
 import fr.maxlego08.ztranslator.zcore.enums.Message;
 import fr.maxlego08.ztranslator.zcore.utils.nms.NMSUtils;
-import fr.maxlego08.ztranslator.zcore.utils.players.ActionBar;
 
 /**
  * Allows you to manage messages sent to players and the console
@@ -121,7 +120,7 @@ public abstract class MessageUtils extends LocationUtils {
 	 * @param args
 	 */
 	protected void actionMessage(Player player, Message message, Object... args) {
-		ActionBar.sendActionBar(player, getMessage(message, args));
+		
 	}
 
 	protected String getMessage(Message message, Object... args) {
