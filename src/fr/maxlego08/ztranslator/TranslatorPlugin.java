@@ -13,6 +13,8 @@ import fr.maxlego08.ztranslator.listener.AdapterListener;
 import fr.maxlego08.ztranslator.save.Config;
 import fr.maxlego08.ztranslator.save.MessageLoader;
 import fr.maxlego08.ztranslator.zcore.ZPlugin;
+import fr.maxlego08.ztranslator.zcore.utils.plugins.Metrics;
+import fr.maxlego08.ztranslator.zcore.utils.plugins.VersionChecker;
 
 /**
  * System to create your plugins very simply Projet:
@@ -53,6 +55,11 @@ public class TranslatorPlugin extends ZPlugin {
 
 		this.getSavers().forEach(saver -> saver.load(this.getPersist()));
 						
+		VersionChecker checker = new VersionChecker(this, 230);
+		checker.useLastVersion();
+		
+		new Metrics(this, 14307);
+		
 		this.postEnable();
 	}
 

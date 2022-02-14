@@ -12,6 +12,7 @@ public class CommandTranslator extends VCommand {
 		super(plugin);
 		this.setPermission(Permission.ZTRANSLATOR_USE);
 		this.addSubCommand(new CommandTranslatorReload(plugin));
+		this.addSubCommand(new CommandTranslatorVersion(plugin));
 	}
 
 	@Override
