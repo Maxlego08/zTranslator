@@ -13,7 +13,6 @@ import java.util.Locale;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
-import java.util.UUID;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ThreadLocalRandom;
@@ -21,8 +20,6 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -48,9 +45,6 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.potion.PotionEffectType;
 
-import com.mojang.authlib.GameProfile;
-import com.mojang.authlib.properties.Property;
-
 import fr.maxlego08.ztranslator.TranslatorPlugin;
 import fr.maxlego08.ztranslator.zcore.enums.EnumInventory;
 import fr.maxlego08.ztranslator.zcore.enums.Message;
@@ -59,12 +53,6 @@ import fr.maxlego08.ztranslator.zcore.utils.builder.CooldownBuilder;
 import fr.maxlego08.ztranslator.zcore.utils.builder.TimerBuilder;
 import fr.maxlego08.ztranslator.zcore.utils.nms.ItemStackUtils;
 import fr.maxlego08.ztranslator.zcore.utils.nms.NMSUtils;
-import fr.maxlego08.ztranslator.zcore.utils.players.ActionBar;
-import net.md_5.bungee.api.chat.BaseComponent;
-import net.md_5.bungee.api.chat.ClickEvent;
-import net.md_5.bungee.api.chat.HoverEvent;
-import net.md_5.bungee.api.chat.HoverEvent.Action;
-import net.md_5.bungee.api.chat.TextComponent;
 
 @SuppressWarnings("deprecation")
 public abstract class ZUtils extends MessageUtils {
@@ -591,18 +579,7 @@ public abstract class ZUtils extends MessageUtils {
 	 * @return
 	 */
 	protected String color(String message) {
-		if (message == null)
-			return null;
-		if (NMSUtils.isHexColor()) {
-			Pattern pattern = Pattern.compile("#[a-fA-F0-9]{6}");
-			Matcher matcher = pattern.matcher(message);
-			while (matcher.find()) {
-				String color = message.substring(matcher.start(), matcher.end());
-				message = message.replace(color, net.md_5.bungee.api.ChatColor.of(color) + "");
-				matcher = pattern.matcher(message);
-			}
-		}
-		return net.md_5.bungee.api.ChatColor.translateAlternateColorCodes('&', message);
+		return message;
 	}
 
 	/**
@@ -675,54 +652,6 @@ public abstract class ZUtils extends MessageUtils {
 	protected String generateRandomString(int length) {
 		RandomString randomString = new RandomString(length);
 		return randomString.nextString();
-	}
-
-	/**
-	 * 
-	 * @param message
-	 * @return
-	 */
-	protected TextComponent buildTextComponent(String message) {
-		return new TextComponent(message);
-	}
-
-	/**
-	 * 
-	 * @param message
-	 * @return
-	 */
-	protected TextComponent setHoverMessage(TextComponent component, String... messages) {
-		BaseComponent[] list = new BaseComponent[messages.length];
-		for (int a = 0; a != messages.length; a++)
-			list[a] = new TextComponent(messages[a] + (messages.length - 1 == a ? "" : "\n"));
-		component.setHoverEvent(new HoverEvent(Action.SHOW_TEXT, list));
-		return component;
-	}
-
-	/**
-	 * 
-	 * @param message
-	 * @return
-	 */
-	protected TextComponent setHoverMessage(TextComponent component, List<String> messages) {
-		BaseComponent[] list = new BaseComponent[messages.size()];
-		for (int a = 0; a != messages.size(); a++)
-			list[a] = new TextComponent(messages.get(a) + (messages.size() - 1 == a ? "" : "\n"));
-		component.setHoverEvent(new HoverEvent(Action.SHOW_TEXT, list));
-		return component;
-	}
-
-	/**
-	 * 
-	 * @param component
-	 * @param action
-	 * @param command
-	 * @return
-	 */
-	protected TextComponent setClickAction(TextComponent component, net.md_5.bungee.api.chat.ClickEvent.Action action,
-			String command) {
-		component.setClickEvent(new ClickEvent(action, command));
-		return component;
 	}
 
 	/**
@@ -880,14 +809,6 @@ public abstract class ZUtils extends MessageUtils {
 	 * @return
 	 */
 	protected boolean isCooldown(Player player, String cooldown, int timer) {
-		if (CooldownBuilder.isCooldown(cooldown, player)) {
-			ActionBar.sendActionBar(player,
-					String.format("§cVous devez attendre encore §6%s §cavant de pouvoir faire cette action.",
-							timerFormat(player, cooldown)));
-			return true;
-		}
-		if (timer > 0)
-			CooldownBuilder.addCooldown(cooldown, player, timer);
 		return false;
 	}
 
@@ -1067,23 +988,6 @@ public abstract class ZUtils extends MessageUtils {
 	protected ItemStack createSkull(String url) {
 
 		ItemStack head = playerHead();
-		if (url.isEmpty())
-			return head;
-
-		SkullMeta headMeta = (SkullMeta) head.getItemMeta();
-		GameProfile profile = new GameProfile(UUID.randomUUID(), null);
-
-		profile.getProperties().put("textures", new Property("textures", url));
-
-		try {
-			Field profileField = headMeta.getClass().getDeclaredField("profile");
-			profileField.setAccessible(true);
-			profileField.set(headMeta, profile);
-
-		} catch (IllegalArgumentException | NoSuchFieldException | SecurityException | IllegalAccessException error) {
-			error.printStackTrace();
-		}
-		head.setItemMeta(headMeta);
 		return head;
 	}
 
