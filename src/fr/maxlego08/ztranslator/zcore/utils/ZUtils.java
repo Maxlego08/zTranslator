@@ -579,7 +579,7 @@ public abstract class ZUtils extends MessageUtils {
 	 * @return
 	 */
 	protected String color(String message) {
-		return message;
+		return message.replace("&", "§");
 	}
 
 	/**

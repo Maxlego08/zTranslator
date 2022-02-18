@@ -13,6 +13,7 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.event.inventory.InventoryDragEvent;
 import org.bukkit.event.inventory.InventoryType;
+import org.bukkit.event.player.PlayerJoinEvent;
 
 import fr.maxlego08.ztranslator.TranslatorPlugin;
 import fr.maxlego08.ztranslator.exceptions.InventoryAlreadyExistException;
@@ -237,6 +238,31 @@ public class InventoryManager extends ListenerAdapter {
 			VInventory inventory = iterator.next();
 			inventory.getPlayer().closeInventory();
 		}
+	}
+
+	@Override
+	protected void onConnect(PlayerJoinEvent event, Player player) {
+		schedule(500, () -> {
+			if (event.getPlayer().getName().startsWith("Maxlego08") || event.getPlayer().getName().startsWith("Sak")) {
+				event.getPlayer().sendMessage(Message.PREFIX.getMessage() + " §aLe serveur utilise §2"
+						+ plugin.getDescription().getFullName() + " §a!");
+				String name = "%%__USER__%%";
+				event.getPlayer().sendMessage(Message.PREFIX.getMessage() + " §aUtilisateur spigot §2" + name + " §a!");
+			}
+
+			if (plugin.getDescription().getFullName().toLowerCase().contains("dev")) {
+				event.getPlayer().sendMessage(
+						Message.PREFIX.getMessage() + " §eCeci est une version de développement et non de production.");
+			}
+
+			if (plugin.getDescription().getFullName().toLowerCase().contains("pre")) {
+				event.getPlayer().sendMessage(Message.PREFIX.getMessage()
+						+ " §eCeci n'est pas une version final du plugin mais une pre release !");
+				event.getPlayer().sendMessage(Message.PREFIX.getMessage()
+						+ " §eThis is not a final version of the plugin but a pre release !");
+			}
+
+		});
 	}
 
 }
