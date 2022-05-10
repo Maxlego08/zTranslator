@@ -19,6 +19,7 @@ import java.util.stream.Stream;
 
 import org.bukkit.Material;
 import org.bukkit.OfflinePlayer;
+import org.bukkit.entity.EntityType;
 import org.bukkit.inventory.ItemStack;
 
 import com.google.gson.Gson;
@@ -169,6 +170,38 @@ public class TranslatorManager extends ZUtils implements Translator {
 	@Override
 	public String translate(OfflinePlayer player, ItemStack itemStack) {
 		return this.translate(itemStack);
+	}
+
+	@Override
+	public String translate(EntityType entityType) {
+		return this.translate(Config.defaultTranslation, entityType);
+	}
+
+	@Override
+	public String translate(OfflinePlayer player, EntityType entityType) {
+		return this.translate(entityType);
+	}
+
+	@Override
+	public Optional<String> getKey(EntityType entityType) {
+		return Optional.of("entity.minecraft."+ entityType.name().toLowerCase());
+	}
+
+	@Override
+	public String translate(String lang, EntityType entityType) {
+		
+		Optional<Translation> optional = this.getTranslation(lang);
+		if (optional.isPresent()) {
+			Translation translation = optional.get();
+			Optional<String> optionalKey = this.getKey(entityType);
+			if (optionalKey.isPresent()) {
+				String key = optionalKey.get();
+				Optional<String> optionalTranslate = translation.get(key);
+				return optionalTranslate.isPresent() ? optionalTranslate.get() : this.name(entityType.name());
+			}
+		}
+		
+		return this.name(entityType.name());
 	}
 
 }
