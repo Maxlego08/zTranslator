@@ -4,6 +4,7 @@ import java.util.Optional;
 
 import org.bukkit.Material;
 import org.bukkit.OfflinePlayer;
+import org.bukkit.entity.EntityType;
 import org.bukkit.inventory.ItemStack;
 
 import fr.maxlego08.ztranslator.zcore.utils.storage.Saveable;
@@ -63,6 +64,30 @@ public interface Translator extends Saveable {
 	public String translate(OfflinePlayer player, ItemStack itemStack);
 
 	/**
+	 * Translate entity type using default language
+	 * 
+	 * @param entityType
+	 * @return translated entity
+	 */
+	public String translate(EntityType entityType);
+	
+	/**
+	 * Translate entity type using default language
+	 * 
+	 * @param entityType
+	 * @return translated entity
+	 */
+	public String translate(String translation, EntityType entityType);
+	
+	/**
+	 * Translate entity type using default language
+	 * 
+	 * @param entityType
+	 * @return translated entity
+	 */
+	public String translate(OfflinePlayer player, EntityType entityType);
+	
+	/**
 	 * Return the key for the translation using a material
 	 * 
 	 * @param material
@@ -77,5 +102,13 @@ public interface Translator extends Saveable {
 	 * @return optional of key
 	 */
 	public Optional<String> getKey(ItemStack itemStack);
+	
+	/**
+	 * Return the key for the translation using an entityType
+	 * 
+	 * @param entityType
+	 * @return optional of key
+	 */
+	public Optional<String> getKey(EntityType entityType);
 
 }
