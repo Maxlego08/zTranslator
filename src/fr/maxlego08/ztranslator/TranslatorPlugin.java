@@ -1,7 +1,5 @@
 package fr.maxlego08.ztranslator;
 
-import java.io.File;
-
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.ServicePriority;
 
@@ -31,16 +29,13 @@ public class TranslatorPlugin extends ZPlugin {
 	public void onEnable() {
 
 		this.preEnable();
-
-		if (!new File(this.getDataFolder(), "bind.json").exists()) {
-			this.saveResource("bind.json", false);
-		}
+		this.saveResource("bind.json", true);
 
 		this.commandManager = new CommandManager(this);
 		this.inventoryManager = new InventoryManager(this);
 
 		this.registerCommand("ztranslator", new CommandTranslator(this));
-		
+
 		/* Add Listener */
 
 		this.addListener(new AdapterListener(this));
@@ -54,12 +49,12 @@ public class TranslatorPlugin extends ZPlugin {
 		this.addSave(this.manager);
 
 		this.getSavers().forEach(saver -> saver.load(this.getPersist()));
-						
+
 		VersionChecker checker = new VersionChecker(this, 230);
 		checker.useLastVersion();
-		
+
 		new Metrics(this, 14307);
-		
+
 		this.postEnable();
 	}
 
@@ -78,8 +73,8 @@ public class TranslatorPlugin extends ZPlugin {
 		return manager;
 	}
 
-	public ClassLoader getClassL(){
+	public ClassLoader getClassL() {
 		return this.getClassLoader();
 	}
-	
+
 }

@@ -40,6 +40,7 @@ public enum Message {
 	DESCRIPTION_RELOAD("Reload config files"),
 	DESCRIPTION_VERSION("Show plugin version"),
 	
+	FILES("§fAll language files can be found here: §7https://github.com/Maxlego08/Minecraft-lang-files"),
 	
 	;
 

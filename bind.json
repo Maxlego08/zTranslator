@@ -9671,6 +9671,414 @@
       },
       "lang": "item.minecraft.zombified_piglin_spawn_egg",
       "name": "zombified_piglin_spawn_egg"
+    },
+    {
+      "item": {
+        "material": "ACACIA_CHEST_BOAT",
+        "version": 1.19
+      },
+      "lang": "item.minecraft.acacia_chest_boat",
+      "name": "acacia_chest_boat"
+    },
+    {
+      "item": {
+        "material": "BIRCH_CHEST_BOAT",
+        "version": 1.19
+      },
+      "lang": "item.minecraft.birch_chest_boat",
+      "name": "birch_chest_boat"
+    },
+    {
+      "item": {
+        "material": "DARK_OAK_CHEST_BOAT",
+        "version": 1.19
+      },
+      "lang": "item.minecraft.dark_oak_chest_boat",
+      "name": "dark_oak_chest_boat"
+    },
+    {
+      "item": {
+        "material": "JUNGLE_CHEST_BOAT",
+        "version": 1.19
+      },
+      "lang": "item.minecraft.jungle_chest_boat",
+      "name": "jungle_chest_boat"
+    },
+    {
+      "item": {
+        "material": "OAK_CHEST_BOAT",
+        "version": 1.19
+      },
+      "lang": "item.minecraft.oak_chest_boat",
+      "name": "oak_chest_boat"
+    },
+    {
+      "item": {
+        "material": "SPRUCE_CHEST_BOAT",
+        "version": 1.19
+      },
+      "lang": "item.minecraft.spruce_chest_boat",
+      "name": "spruce_chest_boat"
+    },
+    {
+      "item": {
+        "material": "MANGROVE_CHEST_BOAT",
+        "version": 1.19
+      },
+      "lang": "item.minecraft.mangrove_chest_boat",
+      "name": "mangrove_chest_boat"
+    },
+    {
+      "item": {
+        "material": "MANGROVE_BOAT",
+        "version": 1.19
+      },
+      "lang": "item.minecraft.mangrove_boat",
+      "name": "mangrove_boat"
+    },
+    {
+      "item": {
+        "material": "MANGROVE_BUTTON",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.mangrove_button",
+      "name": "mangrove_button"
+    },
+    {
+      "item": {
+        "material": "MANGROVE_DOOR",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.mangrove_door",
+      "name": "mangrove_door"
+    },
+    {
+      "item": {
+        "material": "MANGROVE_FENCE",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.mangrove_fence",
+      "name": "mangrove_fence"
+    },
+    {
+      "item": {
+        "material": "MANGROVE_FENCE_GATE",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.mangrove_fence_gate",
+      "name": "mangrove_fence_gate"
+    },
+    {
+      "item": {
+        "material": "MANGROVE_LEAVES",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.mangrove_leaves",
+      "name": "mangrove_leaves"
+    },
+    {
+      "item": {
+        "material": "MANGROVE_LOG",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.mangrove_log",
+      "name": "mangrove_log"
+    },
+    {
+      "item": {
+        "material": "MANGROVE_PLANKS",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.mangrove_planks",
+      "name": "mangrove_planks"
+    },
+    {
+      "item": {
+        "material": "MANGROVE_PRESSURE_PLATE",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.mangrove_pressure_plate",
+      "name": "mangrove_pressure_plate"
+    },
+    {
+      "item": {
+        "material": "MANGROVE_PROPAGULE",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.mangrove_propagule",
+      "name": "mangrove_propagule"
+    },
+    {
+      "item": {
+        "material": "MANGROVE_ROOTS",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.mangrove_roots",
+      "name": "mangrove_roots"
+    },
+    {
+      "item": {
+        "material": "MANGROVE_SIGN",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.mangrove_sign",
+      "name": "mangrove_sign"
+    },
+    {
+      "item": {
+        "material": "MANGROVE_SLAB",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.mangrove_slab",
+      "name": "mangrove_slab"
+    },
+    {
+      "item": {
+        "material": "MANGROVE_STAIRS",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.mangrove_stairs",
+      "name": "mangrove_stairs"
+    },
+    {
+      "item": {
+        "material": "MANGROVE_TRAPDOOR",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.mangrove_trapdoor",
+      "name": "mangrove_trapdoor"
+    },
+    {
+      "item": {
+        "material": "MANGROVE_WOOD",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.mangrove_wood",
+      "name": "mangrove_wood"
+    },
+    {
+      "item": {
+        "material": "MUDDY_MANGROVE_ROOTS",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.muddy_mangrove_roots",
+      "name": "muddy_mangrove_roots"
+    },
+    {
+      "item": {
+        "material": "STRIPPED_MANGROVE_LOG",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.stripped_mangrove_log",
+      "name": "stripped_mangrove_log"
+    },
+    {
+      "item": {
+        "material": "STRIPPED_MANGROVE_WOOD",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.stripped_mangrove_wood",
+      "name": "stripped_mangrove_wood"
+    },
+    {
+      "item": {
+        "material": "ALLAY_SPAWN_EGG",
+        "version": 1.19
+      },
+      "lang": "item.minecraft.allay_spawn_egg",
+      "name": "allay_spawn_egg"
+    },
+    {
+      "item": {
+        "material": "TADPOLE_BUCKET",
+        "version": 1.19
+      },
+      "lang": "item.minecraft.tadpole_bucket",
+      "name": "tadpole_bucket"
+    },
+    {
+      "item": {
+        "material": "TADPOLE_SPAWN_EGG",
+        "version": 1.19
+      },
+      "lang": "item.minecraft.tadpole_spawn_egg",
+      "name": "tadpole_spawn_egg"
+    },
+    {
+      "item": {
+        "material": "DISC_FRAGMENT_5",
+        "version": 1.19
+      },
+      "lang": "item.minecraft.disc_fragment_5",
+      "name": "disc_fragment_5"
+    },
+    {
+      "item": {
+        "material": "ECHO_SHARD",
+        "version": 1.19
+      },
+      "lang": "item.minecraft.echo_shard",
+      "name": "echo_shard"
+    },
+    {
+      "item": {
+        "material": "FROG_SPAWN_EGG",
+        "version": 1.19
+      },
+      "lang": "item.minecraft.frog_spawn_egg",
+      "name": "frog_spawn_egg"
+    },
+    {
+      "item": {
+        "material": "FROGSPAWN",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.frogspawn",
+      "name": "frogspawn"
+    },
+    {
+      "item": {
+        "material": "GOAT_HORN",
+        "version": 1.19
+      },
+      "lang": "instrument.minecraft.admire_goat_horn",
+      "name": "goat_horn"
+    },
+    {
+      "item": {
+        "material": "MUD",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.mud",
+      "name": "mud"
+    },
+    {
+      "item": {
+        "material": "MUD_BRICK_SLAB",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.mud_brick_slab",
+      "name": "mud_brick_slab"
+    },
+    {
+      "item": {
+        "material": "MUD_BRICK_STAIRS",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.mud_brick_stairs",
+      "name": "mud_brick_stairs"
+    },
+    {
+      "item": {
+        "material": "MUD_BRICK_WALL",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.mud_brick_wall",
+      "name": "mud_brick_wall"
+    },
+    {
+      "item": {
+        "material": "MUD_BRICKS",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.mud_bricks",
+      "name": "mud_bricks"
+    },
+    {
+      "item": {
+        "material": "MUSIC_DISC",
+        "version": 1.19
+      },
+      "lang": "item.minecraft.music_disc_5",
+      "name": "music_disc_5"
+    },
+    {
+      "item": {
+        "material": "OCHRE_FROGLIGHT",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.ochre_froglight",
+      "name": "ochre_froglight"
+    },
+    {
+      "item": {
+        "material": "PACKED_MUD",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.packed_mud",
+      "name": "packed_mud"
+    },
+    {
+      "item": {
+        "material": "PEARLESCENT_FROGLIGHT",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.pearlescent_froglight",
+      "name": "pearlescent_froglight"
+    },
+    {
+      "item": {
+        "material": "RECOVERY_COMPASS",
+        "version": 1.19
+      },
+      "lang": "item.minecraft.recovery_compass",
+      "name": "recovery_compass"
+    },
+    {
+      "item": {
+        "material": "REINFORCED_DEEPSLATE",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.reinforced_deepslate",
+      "name": "reinforced_deepslate"
+    },
+    {
+      "item": {
+        "material": "SCULK",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.sculk",
+      "name": "sculk"
+    },
+    {
+      "item": {
+        "material": "SCULK_CATALYST",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.sculk_catalyst",
+      "name": "sculk_catalyst"
+    },
+    {
+      "item": {
+        "material": "SCULK_SHRIEKER",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.sculk_shrieker",
+      "name": "sculk_shrieker"
+    },
+    {
+      "item": {
+        "material": "SCULK_VEIN",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.sculk_vein",
+      "name": "sculk_vein"
+    },
+    {
+      "item": {
+        "material": "VERDANT_FROGLIGHT",
+        "version": 1.19
+      },
+      "lang": "block.minecraft.verdant_froglight",
+      "name": "verdant_froglight"
+    },
+    {
+      "item": {
+        "material": "WARDEN_SPAWN_EGG",
+        "version": 1.19
+      },
+      "lang": "item.minecraft.warden_spawn_egg",
+      "name": "warden_spawn_egg"
     }
   ]
 }

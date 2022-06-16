@@ -18,6 +18,7 @@ public class CommandTranslator extends VCommand {
 	@Override
 	protected CommandType perform(TranslatorPlugin plugin) {
 
+		message(this.sender, Message.FILES);
 		this.subVCommands.forEach(e -> {
 			message(this.sender, Message.COMMAND_SYNTAXE_HELP, "%syntax%", e.getSyntax(), "%description%",
 					e.getDescription());
